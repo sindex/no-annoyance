@@ -14,12 +14,7 @@ DontAnnoy.prototype = {
                                          this._onWindowDemandsAttention.bind(this));
     },
 
-    _onWindowDemandsAttention: function(display, window) {
-        if (!window || window.has_focus() || window.is_skip_taskbar())
-            return;
-
-        Main.activateWindow(window);
-    },
+    _onWindowDemandsAttention: function(display, window) { },
 
     destroy: function() {
         global.display.disconnect(this._windowDemandsAttentionId);
