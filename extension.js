@@ -1,4 +1,5 @@
 const Main = imports.ui.main;
+const Config = imports.misc.config;
 
 function DontAnnoy() {
     this._init();
@@ -14,7 +15,11 @@ DontAnnoy.prototype = {
                                          this._onWindowDemandsAttention.bind(this));
     },
 
-    _onWindowDemandsAttention: function(display, window) { },
+    _onWindowDemandsAttention: function(display, window) {
+		if (!((Config.PACKAGE_VERSION >= 40) || (Config.PACKAGE_VERSION.split('.')[1] >= 36))) {
+			Main.activateWindow(window);
+		}
+	},
 
     destroy: function() {
         global.display.disconnect(this._windowDemandsAttentionId);

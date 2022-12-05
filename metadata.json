@@ -2,11 +2,23 @@
   "description": "Removes the 'Windows is ready' notification and puts the window into focus.", 
   "name": "NoAnnoyance", 
   "shell-version": [
+    "3.18", 
+    "3.20", 
+    "3.22", 
+    "3.24",
+    "3.26",
+    "3.28",
+    "3.30",
+    "3.32",
+    "3.34",
     "3.36",
     "3.38",
-    "40"
+    "40",
+    "41",
+    "42",
+    "43"
   ], 
   "url": "https://github.com/sindex/no-annoyance", 
   "uuid": "noannoyance@sindex.com", 
-  "version": 5
+  "version": 6
 }
